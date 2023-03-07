@@ -1,8 +1,7 @@
 public class Hygiena extends Product {
-    /**
-     * количество в упаковке
-     */
-    private int numOfPackage;
+
+    private int numOfPackage; // количество в упаковке
+
     /**
      * 
      * @param name
@@ -15,7 +14,7 @@ public class Hygiena extends Product {
         super(name, price, count);
         unit = "piese";
         this.numOfPackage = numOfPackage;
-    } 
+    }
 
     @Override
     public String toString() {

@@ -1,13 +1,9 @@
 import java.time.LocalDate;
 
-
 public class Egg extends Food {
-    
-    /**
-     * 
-     * количество в упаковке
-     */
-    private int amountInPackage;
+
+    private int amountInPackage; // количество в упаковке
+
     /**
      * 
      * @param name
@@ -19,7 +15,7 @@ public class Egg extends Food {
      */
 
     public Egg(String name, Double price, int count, LocalDate bestBeforeBest, int amountInPackage) {
-        super(name, price, count,  bestBeforeBest);
+        super(name, price, count, bestBeforeBest);
         this.amountInPackage = amountInPackage;
     }
 
@@ -27,13 +23,4 @@ public class Egg extends Food {
     public String toString() {
         return super.toString() + ",\n\t\tamountInPackage=" + amountInPackage + ".\n";
     }
-
-    public int getAmountInPackage() {
-        return amountInPackage;
-    }
-
-    public void setAmountInPackage(int amountInPackage) {
-        this.amountInPackage = amountInPackage;
-    }
-
 }

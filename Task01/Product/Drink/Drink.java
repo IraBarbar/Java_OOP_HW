@@ -1,30 +1,17 @@
 public class Drink extends Product {
-    /**
-     * 
-     * объем
-     */
-    private double volume;
-
-    public Drink(String name, Double price, int count, double volume) {
-        super(name, price, count);
-        unit = "litr";
-        this.volume = volume;
-    }
-
+    private double volume; // объем
     /**
      * 
      * @param name
      * @param price
      * @param count
-     * @param unit
      * @param volume
      */
 
-
-
-    public Drink(String name, Double price, int count) {
+    public Drink(String name, Double price, int count, double volume) {
         super(name, price, count);
-        // TODO Auto-generated constructor stub
+        unit = "litr";
+        this.volume = volume;
     }
 
     @Override

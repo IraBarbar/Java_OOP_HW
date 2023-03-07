@@ -40,9 +40,7 @@
 классе Program
  */
 public class Program {
-    public static void main(String[] args) {
 
-    }
     public static void showProduct(Product pro) {    
         System.out.println(pro.toString());
     }

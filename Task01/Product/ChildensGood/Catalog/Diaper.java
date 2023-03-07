@@ -1,13 +1,11 @@
 
 public class Diaper extends ChildensGood {
-    /**
-     * памперсы
-     * 
-     */
+    // памперсы:
     private int size;
     private int minWeight;
     private int maxWeight;
     private String typeDiaper;
+
     /**
      * 
      * @param name
@@ -33,7 +31,8 @@ public class Diaper extends ChildensGood {
 
     @Override
     public String toString() {
-        return super.toString() + ",\n\t\tsize=" + size + ", minWeight=" + minWeight + ", maxWeight=" + maxWeight + ", typeDiaper="
+        return super.toString() + ",\n\t\tsize=" + size + ", minWeight=" + minWeight + ", maxWeight=" + maxWeight
+                + ", typeDiaper="
                 + typeDiaper + ".\n";
     }
 }

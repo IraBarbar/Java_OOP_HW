@@ -1,7 +1,9 @@
 
 public class ChildensGood extends Product {
+
     private int minAge;
     private String hypoAllergenicity;
+
     /**
      * 
      * @param name
@@ -23,5 +25,4 @@ public class ChildensGood extends Product {
     public String toString() {
         return super.toString() + ",\n\t\tminAge=" + minAge + ", hypoAllergenicity=" + hypoAllergenicity + "";
     }
-    
 }

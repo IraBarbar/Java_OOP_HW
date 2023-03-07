@@ -2,6 +2,7 @@ import java.time.LocalDate;
 
 public class Bread extends Food {
     private String typeOfFlour;
+
     /**
      * 
      * @param name
@@ -20,14 +21,4 @@ public class Bread extends Food {
     public String toString() {
         return super.toString() + ",\n\t\ttypeOfFlour=" + typeOfFlour + ".\n";
     }
-
-    public String getTypeOfFlour() {
-        return typeOfFlour;
-    }
-
-    public void setTypeOfFlour(String typeOfFlour) {
-        this.typeOfFlour = typeOfFlour;
-    }
-
-    
 }

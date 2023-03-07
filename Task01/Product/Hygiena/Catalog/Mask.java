@@ -1,4 +1,4 @@
-public class Mask extends Hygiena{
+public class Mask extends Hygiena {
     /**
      * 
      * @param name
@@ -16,5 +16,5 @@ public class Mask extends Hygiena{
     public String toString() {
         return super.toString() + ".\n";
     }
-    
+
 }

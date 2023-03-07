@@ -1,9 +1,6 @@
 public class ToiletPaper extends Hygiena {
-    /**
-     * 
-     * количество слоев
-     */
-    private Integer numOfLayers;
+
+    private Integer numOfLayers; // количество слоев
 
     /**
      * 
@@ -22,14 +19,6 @@ public class ToiletPaper extends Hygiena {
     @Override
     public String toString() {
         return super.toString() + ",\n\t\tnumOfLayers=" + numOfLayers + ".\n";
-    }
-
-    public Integer getNumOfLayers() {
-        return numOfLayers;
-    }
-
-    public void setNumOfLayers(Integer numOfLayers) {
-        this.numOfLayers = numOfLayers;
     }
 
 }
