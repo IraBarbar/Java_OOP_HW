@@ -3,7 +3,7 @@ public class Drink extends Product {
      * 
      * объем
      */
-    protected double volume;
+    private double volume;
 
     public Drink(String name, Double price, int count, double volume) {
         super(name, price, count);

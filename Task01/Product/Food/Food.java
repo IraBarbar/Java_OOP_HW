@@ -5,7 +5,7 @@ public class Food extends Product {
      * 
      * срок годности
      */
-    protected LocalDate bestBeforeBest  ;
+    private LocalDate bestBeforeBest  ;
     /**
      * 
      * @param name

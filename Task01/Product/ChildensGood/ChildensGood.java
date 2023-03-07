@@ -1,7 +1,7 @@
 
 public class ChildensGood extends Product {
-    protected int minAge;
-    protected String hypoAllergenicity;
+    private int minAge;
+    private String hypoAllergenicity;
     /**
      * 
      * @param name

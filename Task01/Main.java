@@ -14,17 +14,17 @@ public class Main {
         Lemonada lem01 = new Lemonada("Fanta", 2.25, 1, 1);
         Program.showProduct(lem01);
 
-        Bread brad01 = new Bread("My family", 1.89, 1,
+        Bread brad01 = new Bread("Bread 'My family'", 1.89, 1,
                 LocalDate.of(2023, 03, 20),
                 "the best sort");
         Program.showProduct(brad01);
 
-        Egg egg01 = new Egg("C-1", 3.89, 1,
+        Egg egg01 = new Egg("Eggs 'C-1'", 3.89, 1,
                 LocalDate.of(2023, 04, 10),
                 10);
         Program.showProduct(egg01);
 
-        Milk milk01 = new Milk("Sofiyka", 2.41, 1,
+        Milk milk01 = new Milk("Milk 'Sofiyka'", 2.41, 1,
                 LocalDate.of(2023, 03, 10), 3.2);
         Program.showProduct(milk01);
 

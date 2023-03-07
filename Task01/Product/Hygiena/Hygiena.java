@@ -2,7 +2,7 @@ public class Hygiena extends Product {
     /**
      * количество в упаковке
      */
-    protected int numOfPackage;
+    private int numOfPackage;
     /**
      * 
      * @param name
