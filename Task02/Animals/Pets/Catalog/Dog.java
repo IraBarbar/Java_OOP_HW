@@ -25,7 +25,7 @@ public Dog(int heightSm, int weightGramm, String eyeColor, String nickname, Stri
 
 @Override
 public String printInfo() {
-    return super.printInfo() + ",\n\ttraining-" + training + ".\n" ;
+    return super.printInfo() + ",\n\ttraining=" + training + ".\n" ;
 }
 
 @Override

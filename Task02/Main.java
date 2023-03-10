@@ -7,8 +7,7 @@ public class Main {
 
         Zoo animals = new Zoo();
         String[] listClasses = new String[] {"Cat", "Dog", "Tiger", "Wolf", "Chicken", "Stork"};
-
-
+        
         Animal cat01 = new Cat(0, 15000, null, null, null, "yes", null, null, null);
         animals.add(cat01);
 

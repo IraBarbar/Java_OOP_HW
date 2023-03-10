@@ -1,4 +1,3 @@
-import java.lang.reflect.Type;
 import java.util.Scanner;
 
 public class Program {
@@ -68,7 +67,6 @@ public class Program {
                 System.out.println(animal.printInfo());
             }
         }
-
     }
 
     public static void printMakeSoundOne(Zoo animals, String typeClass) {

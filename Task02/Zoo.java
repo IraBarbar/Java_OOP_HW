@@ -17,24 +17,27 @@ public class Zoo implements Iterable<Animal> {
      * @param iScanner
      * @return
      */
+    
     public ArrayList<Animal> addNewCat(Scanner iScanner) {
+        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+        String[] yesNo = new String[] {"yes", "no"};
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
         int weightGramm = iScanner.nextInt();
-        System.out.println("Input eyeColor:");
-        String eyeColor = iScanner.next();
+        System.out.println("Input index eyeColor:");
+        String eyeColor = listAnswer(listColor, iScanner);
         System.out.println("Input nickname:");
         String nickname = iScanner.next();
         System.out.println("Input breed:");
         String breed = iScanner.next();
-        System.out.println("Input vaccin:");
-        String vaccin = iScanner.next();
-        System.out.println("Input colorCoat:");
-        String colorCoat = iScanner.next();
+        System.out.println("Input index vaccin:");
+        String vaccin = listAnswer(yesNo, iScanner);
+        System.out.println("Input index colorCoat:");
+        String colorCoat = listAnswer(listColor, iScanner);
         LocalDate dateBirth = LocalDate.now();
-        System.out.println("Input presenceWool:");
-        String presenceWool = iScanner.next();
+        System.out.println("Input index  presenceWool:");
+        String presenceWool = listAnswer(yesNo, iScanner);
         Animal cat = new Cat(heightSm, weightGramm, eyeColor, nickname,
                 breed, vaccin, colorCoat, dateBirth, presenceWool);
         zoo.add(cat);
@@ -42,23 +45,26 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewDog(Scanner iScanner) {
+        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+        String[] yesNo = new String[] {"yes", "no"};
+
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
         int weightGramm = iScanner.nextInt();
-        System.out.println("Input eyeColor:");
-        String eyeColor = iScanner.next();
+        System.out.println("Input index eyeColor:");
+        String eyeColor = listAnswer(listColor, iScanner);
         System.out.println("Input nickname:");
         String nickname = iScanner.next();
         System.out.println("Input breed:");
         String breed = iScanner.next();
-        System.out.println("Input vaccin:");
-        String vaccin = iScanner.next();
-        System.out.println("Input colorCoat:");
-        String colorCoat = iScanner.next();
+        System.out.println("Input index vaccin:");
+        String vaccin = listAnswer(yesNo, iScanner);
+        System.out.println("Input index colorCoat:");
+        String colorCoat = listAnswer(listColor, iScanner);
         LocalDate dateBirth = LocalDate.now();
-        System.out.println("Input training:");
-        String training = iScanner.next();
+        System.out.println("Input index training:");
+        String training = listAnswer(yesNo, iScanner);
         Animal dog = new Dog(heightSm, weightGramm, eyeColor, nickname,
                 breed, vaccin, colorCoat, dateBirth, training);
         zoo.add(dog);
@@ -66,12 +72,14 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewChicken(Scanner iScanner) {
+        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
         int weightGramm = iScanner.nextInt();
-        System.out.println("Input eyeColor:");
-        String eyeColor = iScanner.next();
+        System.out.println("Input index eyeColor:");
+        String eyeColor = listAnswer(listColor, iScanner);
         System.out.println("Input flight altitude, cm:");
         int heightFlightSm = iScanner.nextInt();
 
@@ -81,12 +89,14 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewStork(Scanner iScanner) {
+        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+        
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
         int weightGramm = iScanner.nextInt();
-        System.out.println("Input eyeColor:");
-        String eyeColor = iScanner.next();
+        System.out.println("Input index eyeColor:");
+        String eyeColor = listAnswer(listColor, iScanner);
         System.out.println("Input flight altitude, cm:");
         int heightFlightSm = iScanner.nextInt();
 
@@ -96,12 +106,14 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewTiger(Scanner iScanner) {
+        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
         int weightGramm = iScanner.nextInt();
-        System.out.println("Input eyeColor:");
-        String eyeColor = iScanner.next();
+        System.out.println("Input index eyeColor:");
+        String eyeColor = listAnswer(listColor, iScanner);
         System.out.println("Input habitat:");
         String habitat = iScanner.next();
         LocalDate dateFound = LocalDate.now();
@@ -112,17 +124,20 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewWolf(Scanner iScanner) {
+        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+        String[] yesNo = new String[] {"yes", "no"};
+
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
         int weightGramm = iScanner.nextInt();
-        System.out.println("Input eyeColor:");
-        String eyeColor = iScanner.next();
+        System.out.println("Input index eyeColor:");
+        String eyeColor = listAnswer(listColor, iScanner);
         System.out.println("Input habitat:");
         String habitat = iScanner.next();
         LocalDate dateFound = LocalDate.now();
-        System.out.println("Input leader of the pack:");
-        String leaderPack = iScanner.next();
+        System.out.println("Input index leader of the pack:");
+        String leaderPack = listAnswer(yesNo, iScanner);
 
         Animal wolf = new Wolf(heightSm, weightGramm, eyeColor,
                 habitat, dateFound, leaderPack);
@@ -169,5 +184,17 @@ public class Zoo implements Iterable<Animal> {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    private String listAnswer(String[] array, Scanner iScanner) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf("%d. %s\n", i + 1, array[i]);
+        }
+        int num = iScanner.nextInt();
+        for (int i = 0; i < array.length; i++) {
+            if (num - 1 == i)
+                return array[i];
+        }
+        return "";
     }
 }

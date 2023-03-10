@@ -25,7 +25,10 @@ public abstract class Bird extends Animal implements Fly {
 
     @Override
     public String printInfo() {
-        return super.printInfo() + "\n\tflight altitude-" + heightFlightSm + "сm.\n";
+        if (heightFlightSm > 1000) {
+            return super.printInfo() + "\n\tflight altitude=" + heightFlightSm / 1000 + "m.\n";
+        } else
+            return super.printInfo() + "\n\tflight altitude=" + heightFlightSm + "cm.\n";
     }
 
     @Override

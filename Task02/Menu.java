@@ -50,7 +50,7 @@ public class Menu {
                 getMenu(iScanner, animals, arr);
                 break;
             case 5:
-                Program.printInfo(animals);
+                Program.getInfo(animals);
                 getMenu(iScanner, animals, arr);
                 break;
             case 6:
@@ -86,4 +86,5 @@ public class Menu {
         }
         return "";
     }
+
 }
