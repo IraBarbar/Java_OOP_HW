@@ -4,7 +4,7 @@ public class Tiger extends Wild {
 
     @Override
     public String printInfo() {
-        return super.printInfo();
+        return super.printInfo() + ".\n";
     }
 
     @Override

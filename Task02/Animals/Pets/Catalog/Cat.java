@@ -16,9 +16,8 @@ public class Cat extends Pet {
      * @param dateBirth
      * @param presenceWool
      */
-
-    public Cat(final int heightSm, final int weightGramm, final String eyeColor, final String nickname, final String breed, final String vaccin,
-            final String colorCoat, final LocalDate dateBirth, final String presenceWool) {
+    public Cat(int heightSm, int weightGramm, String eyeColor, String nickname, String breed, String vaccin,
+            String colorCoat, LocalDate dateBirth, String presenceWool) {
         super(heightSm, weightGramm, eyeColor, nickname, breed, vaccin, colorCoat, dateBirth);
         this.presenceWool = presenceWool;
     }
@@ -41,14 +40,12 @@ public class Cat extends Pet {
 
     @Override
     public String printInfo() {
-        return  super.printInfo() + ",\n\tpresenceWool=" + presenceWool + ".\n";
+        return super.printInfo() + ",\n\tpresenceWool=" + presenceWool + ".\n";
     }
 
     @Override
     public void train() {
         // TODO Auto-generated method stub
-        
     }
-
 
 }

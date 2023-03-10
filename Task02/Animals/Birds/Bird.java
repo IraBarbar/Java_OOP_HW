@@ -18,19 +18,23 @@ public abstract class Bird extends Animal implements Fly {
     public int getHeightFlightSm() {
         return heightFlightSm;
     }
+
     public void setHeightFlightSm(int heightFlightSm) {
         this.heightFlightSm = heightFlightSm;
     }
 
     @Override
     public String printInfo() {
-        return super.printInfo() + "\n\tflight altitude-" + heightFlightSm + "sm.\n";
+        return super.printInfo() + "\n\tflight altitude-" + heightFlightSm + "сm.\n";
     }
 
     @Override
     public void fly() {
-        System.out.printf("I'm flying at a height of %d centimeters.\n", getHeightFlightSm());
-        
+        if (getHeightFlightSm() > 1000)
+            System.out.printf("I'm flying at a height of %d m.\n", getHeightFlightSm() / 1_000);
+        else
+            System.out.printf("I'm flying at a height of %d centimeters.\n", getHeightFlightSm());
+
     }
 
 }

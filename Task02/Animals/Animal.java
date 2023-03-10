@@ -24,7 +24,10 @@ public abstract class Animal implements MakeSound, PrintInfo {
 
     @Override
     public String printInfo() {
-        return "\theightSm=" + heightSm + ", weightGramm=" + weightGramm + ", eyeColor=" + eyeColor + "";
+        if (weightGramm > 1000)
+            return "\theightSm=" + heightSm + ", weight=" + weightGramm / 1000 + "kg, eyeColor=" + eyeColor + "";
+        else
+            return "\theightSm=" + heightSm + ", weightGramm=" + weightGramm + ", eyeColor=" + eyeColor + "";
     }
 
 }

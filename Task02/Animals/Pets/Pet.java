@@ -9,6 +9,26 @@ public abstract class Pet extends Animal implements ShowAffection, Train {
     private String colorCoat; // Цвет шерсти
     private LocalDate dateBirth;
 
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public String getVaccin() {
+        return vaccin;
+    }
+
+    public String getColorCoat() {
+        return colorCoat;
+    }
+
+    public LocalDate getDateBirth() {
+        return dateBirth;
+    }
+
     /**
      * 
      * @param heightSm

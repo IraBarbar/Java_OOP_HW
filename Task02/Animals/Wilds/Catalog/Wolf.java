@@ -21,7 +21,7 @@ public class Wolf extends Wild {
 
     @Override
     public String printInfo() {
-        return super.printInfo() + "\n\tleader of the pack " + leaderPack + ".\n" ;
+        return super.printInfo() + "\n\tleader of the pack=" + leaderPack + ".\n" ;
     }
 
     @Override
