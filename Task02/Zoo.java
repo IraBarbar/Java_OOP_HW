@@ -17,10 +17,11 @@ public class Zoo implements Iterable<Animal> {
      * @param iScanner
      * @return
      */
-    
+
     public ArrayList<Animal> addNewCat(Scanner iScanner) {
-        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
-        String[] yesNo = new String[] {"yes", "no"};
+        String[] listColor = new String[] { "black", "brown", "green", "blue", "grey" };
+        String[] yesNo = new String[] { "yes", "no" };
+
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
@@ -45,8 +46,8 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewDog(Scanner iScanner) {
-        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
-        String[] yesNo = new String[] {"yes", "no"};
+        String[] listColor = new String[] { "black", "brown", "green", "blue", "grey" };
+        String[] yesNo = new String[] { "yes", "no" };
 
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
@@ -72,7 +73,7 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewChicken(Scanner iScanner) {
-        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+        String[] listColor = new String[] { "black", "brown", "green", "blue", "grey" };
 
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
@@ -89,8 +90,8 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewStork(Scanner iScanner) {
-        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
-        
+        String[] listColor = new String[] { "black", "brown", "green", "blue", "grey" };
+
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
         System.out.println("Input weightGramm:");
@@ -106,7 +107,7 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewTiger(Scanner iScanner) {
-        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
+        String[] listColor = new String[] { "black", "brown", "green", "blue", "grey" };
 
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();
@@ -124,8 +125,8 @@ public class Zoo implements Iterable<Animal> {
     }
 
     public ArrayList<Animal> addNewWolf(Scanner iScanner) {
-        String[] listColor = new String[] {"black", "brown", "green", "blue", "grey"};
-        String[] yesNo = new String[] {"yes", "no"};
+        String[] listColor = new String[] { "black", "brown", "green", "blue", "grey" };
+        String[] yesNo = new String[] { "yes", "no" };
 
         System.out.println("Input heightSm:");
         int heightSm = iScanner.nextInt();

@@ -30,6 +30,5 @@ public class Main {
         Menu.getMenu(iScanner, animals, listClasses);
                
         iScanner.close();
-
     }
 }
