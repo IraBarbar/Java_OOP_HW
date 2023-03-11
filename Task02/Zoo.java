@@ -189,7 +189,7 @@ public class Zoo implements Iterable<Animal> {
 
     private String listAnswer(String[] array, Scanner iScanner) {
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("%d. %s\n", i + 1, array[i]);
+            System.out.printf("\t%d. %s\n", i + 1, array[i]);
         }
         int num = iScanner.nextInt();
         for (int i = 0; i < array.length; i++) {
