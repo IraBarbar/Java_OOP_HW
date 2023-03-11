@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public static void printMenu() {
+    private static void printMenu() {
         System.out.printf("\t\tMenu:\n" +
                 "\t\t1. Add an animal to the zoo.\n" +
                 "\t\t2. Remove an animal from the zoo.\n" +
@@ -13,7 +13,7 @@ public class Menu {
                 "\t\t7. Exit.\n");
     }
 
-    public static int numMenu(Scanner iScanner) {
+    private static int numMenu(Scanner iScanner) {
         printMenu();
         String num = iScanner.next();
         if (isDigit(num)) {
