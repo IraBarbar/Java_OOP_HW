@@ -11,7 +11,7 @@ public class Menu {
                 "\t\t5. Print information about the animals.\n" +
                 "\t\t6. Make all the animals currently in the zoo make a sound.\n" +
                 "\t\t7. Exit.\n");
-    }
+    } 
 
     private static int numMenu(Scanner iScanner) {
         printMenu();
@@ -30,37 +30,37 @@ public class Menu {
         return 10;
     }
 
-    public static void getMenu(Scanner iScanner, Zoo animals, String[] arr) {
+    public static void getMenu(Scanner iScanner, ListFigures figures, String[] arr) {
         int num = numMenu(iScanner);
         switch (num) {
             case 1:
-                Program.newAnimal(iScanner, addClass(arr, iScanner), animals);
-                getMenu(iScanner, animals, arr);
+                Program.newAnimal(iScanner, addClass(arr, iScanner), figures);
+                getMenu(iScanner, figures, arr);
                 break;
             case 2:
-                Program.delAnimal(iScanner, animals);
-                getMenu(iScanner, animals, arr);
+                Program.delAnimal(iScanner, figures);
+                getMenu(iScanner, figures, arr);
                 break;
             case 3:
-                Program.printInfoOne(animals, addClass(arr, iScanner));
-                getMenu(iScanner, animals, arr);
+                Program.printInfoOne(figures, addClass(arr, iScanner));
+                getMenu(iScanner, figures, arr);
                 break;
             case 4:
-                Program.printMakeSoundOne(animals, addClass(arr, iScanner));
-                getMenu(iScanner, animals, arr);
+                Program.printMakeSoundOne(figures, addClass(arr, iScanner));
+                getMenu(iScanner, figures, arr);
                 break;
             case 5:
-                Program.getInfo(animals);
-                getMenu(iScanner, animals, arr);
+                Program.getInfo(figures);
+                getMenu(iScanner, figures, arr);
                 break;
             case 6:
-                Program.printMakeSoundAll(animals);
-                getMenu(iScanner, animals, arr);
+                Program.printMakeSoundAll(figures);
+                getMenu(iScanner, figures, arr);
                 break;
             case 7:
                 break;
             default:
-                getMenu(iScanner, animals, arr);
+                getMenu(iScanner, figures, arr);
                 break;
         }
 
