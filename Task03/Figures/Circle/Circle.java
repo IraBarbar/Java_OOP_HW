@@ -1,6 +1,5 @@
-import java.util.Comparator;
 
-public class Circle extends Figure implements Circumference, Comparator<Figure> {
+public class Circle extends Figure implements Circumference {
     private double radiusCm;
 
     public Circle(double radiusCm) {
@@ -26,11 +25,13 @@ public class Circle extends Figure implements Circumference, Comparator<Figure> 
     }
 
     @Override
-    public Double findArea() {
-        if (examination())
-            return Math.PI * Math.pow(radiusCm, 2);
+    public int findArea() {
+        if (examination()) {
+            area = (int) (Math.PI * Math.pow(radiusCm, 2));
+            return area;
+        }
         else
-            return 0.0;
+            return 0;
     }
 
     @Override
@@ -53,20 +54,13 @@ public class Circle extends Figure implements Circumference, Comparator<Figure> 
         return super.equals(obj);
     }
 
-    
-    public int compareTo(Figure o) {
-        if (this.findArea() > o.findArea())
-            return 1;
-        else if (this.findArea() < o.findArea())
-            return -1;
-        else
-            return 0;
+    public double getRadiusCm() {
+        return radiusCm;
     }
 
-    @Override
-    public int compare(Figure o1, Figure o2) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compare'");
+    public void setRadiusCm(double radiusCm) {
+        this.radiusCm = radiusCm;
     }
+
 
 }

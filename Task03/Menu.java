@@ -22,15 +22,15 @@ public class Menu {
                 getMenu(iScanner, figures, arr);
                 break;
             case 3:
-                
+                Program.delFigure(iScanner, figures);
                 getMenu(iScanner, figures, arr);
                 break;
             case 4:
-                
+                Program.changeFigure(iScanner, addClass(arr, iScanner), figures);
                 getMenu(iScanner, figures, arr);
                 break;
             case 5:
-                
+                Program.sortArea(figures);
                 getMenu(iScanner, figures, arr);
                 break;
             case 6:

@@ -1,19 +1,20 @@
-public abstract class Figure {
-    public Double area;
+public abstract class Figure  {
+    public static Figure getRadiusCm;
+    protected int area;
 
     // площадь:
-    public Double findArea() {
+    public int findArea() {
         if (examination())
             return area;
         else
-            return 0.0;
+            return 0;
     }
 
     public void printArea() {
         if (!examination())
             printNoExam();
         else
-            System.out.printf("\tThe figure area = %.2f cm square.\n", findArea());
+            System.out.printf("\tThe figure area = %d cm square.\n", findArea());
     }
 
     public boolean examination() {
@@ -25,10 +26,13 @@ public abstract class Figure {
             System.out.println("The number is invalid!");
     }
 
-    public void findCircumference() {
-    }
-
     public void printInfo(){     
     }
 
+    public static void setRadiusCm(Double a) {
+    }
+
+    public static Double getRadiusCm(double nextDouble) {
+        return null;
+    }
 }
