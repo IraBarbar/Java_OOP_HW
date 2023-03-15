@@ -12,7 +12,7 @@ public abstract class Figure  {
         if (!examination())
             printNoExam();
         else
-            System.out.printf("\tThe figure area = %d cm square.\n", findArea());
+            System.out.printf("\tThe figure area = %dcm square.\n", findArea());
     }
 
     public boolean examination() {

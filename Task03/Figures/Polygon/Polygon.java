@@ -41,7 +41,7 @@ public abstract class Polygon extends Figure implements Perimeter {
         int i = 0;
         System.out.printf("\tSides:");
         for (Integer side : sides) {
-            System.out.printf(" " + letters[i++] + " = " + side + " ");
+            System.out.printf(" " + letters[i++] + " = " + side + "cm ");
         }
         System.out.println();
     }
@@ -61,7 +61,7 @@ public abstract class Polygon extends Figure implements Perimeter {
         if (!examination())
             printNoExam();
         else
-            System.out.printf("\tFigure perimeter = %.2f.\n", findPerimeter());
+            System.out.printf("\tFigure perimeter = %.2fcm.\n", findPerimeter());
     }
 
 }

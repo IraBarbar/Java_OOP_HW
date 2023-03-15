@@ -58,7 +58,7 @@ public class Circle extends Figure implements Circumference {
         if (!examination())
             printNoExam();
         else {
-            System.out.printf("\tThe circumference = %.2f cm.\n", findCircumference());
+            System.out.printf("\tThe circumference = %.2fcm.\n", findCircumference());
         }
 
     }
