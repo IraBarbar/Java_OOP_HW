@@ -8,19 +8,19 @@ public class Circle extends Figure implements Circumference {
 
     @Override
     public boolean examination() {
-        if (radiusCm > 0 )
+        if (radiusCm > 0)
             return true;
         else
             return false;
     }
 
     @Override
-    public void findCircumference() {
+    public Double findCircumference() {
         if (!examination())
-            printNoExam();
+            return null;
         else {
             Double circumference = 2 * Math.PI * radiusCm;
-            System.out.printf("\tThe circumference = %.2f cm.\n", circumference);
+            return circumference;
         }
     }
 
@@ -29,8 +29,7 @@ public class Circle extends Figure implements Circumference {
         if (examination()) {
             area = (int) (Math.PI * Math.pow(radiusCm, 2));
             return area;
-        }
-        else
+        } else
             return 0;
     }
 
@@ -62,5 +61,14 @@ public class Circle extends Figure implements Circumference {
         this.radiusCm = radiusCm;
     }
 
+    @Override
+    public void printCircumference() {
+        if (!examination())
+            printNoExam();
+        else {
+            System.out.printf("\tThe circumference = %.2f cm.\n", findCircumference());
+        }
+
+    }
 
 }

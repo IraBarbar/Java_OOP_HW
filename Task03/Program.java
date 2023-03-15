@@ -8,7 +8,9 @@ public class Program {
             figure.printInfo();
             figure.printArea();
             if (figure instanceof Circumference)
-                ((Circumference) figure).findCircumference();
+                ((Circumference) figure).printCircumference();
+            if (figure instanceof Perimeter)
+                ((Perimeter) figure).printPerimeter(); 
             System.out.println();
         }
     } 
@@ -17,7 +19,16 @@ public class Program {
         if (!typeClass.isEmpty()) {
             if (typeClass.equals("Circle")) {
                 figures.addNewCircle(iScanner);
-            }            
+            }  
+            if (typeClass.equals("Triangle")) {
+                figures.addNewTriangle(iScanner);    
+            }
+            if (typeClass.equals("Rectangle")) {
+                figures.addNewCircle(iScanner);
+            }
+            if (typeClass.equals("Square")) {
+                figures.addNewCircle(iScanner);
+            }          
         } else
             System.out.println("The number is invalid!");
     }
@@ -29,7 +40,9 @@ public class Program {
             figure.printArea();
             figure.printInfo();
             if (figure instanceof Circumference)
-                ((Circumference) figure).findCircumference();
+                ((Circumference) figure).printCircumference();
+            if (figure instanceof Perimeter)
+                ((Perimeter) figure).printPerimeter();
             System.out.println();
         }
     } 

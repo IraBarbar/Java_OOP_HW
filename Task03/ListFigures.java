@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ListFigures implements Iterable<Figure> {
 
     ArrayList<Figure> figures;
-    int index = 0;
+    int index;
 
     /**
      * 
@@ -52,7 +52,6 @@ public class ListFigures implements Iterable<Figure> {
         figures.add(fig);
     }
 
-
     public ArrayList<Figure> addNewCircle(Scanner iScanner) {
 
         System.out.println("Input radius in cm:");
@@ -70,15 +69,35 @@ public class ListFigures implements Iterable<Figure> {
         return figures;
     }
 
+    public ArrayList<Figure> addNewTriangle(Scanner iScanner) {
+        String[] letters = new String[] { "a", "b", "c" };
+        int[] side = new int[3];
+        int i = 0;
+        for (String letter : letters) {
+            System.out.printf("Input side %s in cm:", letter);
+            String temp = iScanner.next();
+            if (Menu.isDigit(temp)) {
+                if (Integer.parseInt(temp) > 0)
+                    side[i++] = Integer.parseInt(temp);
+            } else
+                System.out.println("The number is invalid!");
+        }
+        Figure triangle = new Triangle(side[0], side[1], side[2]);
+        if (triangle.examination())
+            figures.add(triangle);
+        else
+            System.out.println("Sides entered incorrectly!");
+        return figures;
+    }
+
     public ArrayList<Figure> modifiedCircle(int index, Scanner iScanner) {
-        System.out.println("Input radius in cm:");
+        System.out.println("Input radius in cm: ");
         String radiusCm = iScanner.next();
         if (isDigit(radiusCm)) {
             if (Double.parseDouble(radiusCm) > 0) {
                 Figure circle = new Circle(Double.parseDouble(radiusCm));
                 figures.set(index, circle);
-            }
-            else {
+            } else {
                 System.out.println("Invalid number!");
             }
         } else {
@@ -86,8 +105,6 @@ public class ListFigures implements Iterable<Figure> {
         }
         return figures;
     }
-
-
 
     public void sort() {
         figures.sort(Comparator.comparingInt(o -> o.findArea()));

@@ -1,6 +1,5 @@
 public abstract class Figure  {
-    public static Figure getRadiusCm;
-    protected int area;
+    public int area;
 
     // площадь:
     public int findArea() {
@@ -29,10 +28,4 @@ public abstract class Figure  {
     public void printInfo(){     
     }
 
-    public static void setRadiusCm(Double a) {
-    }
-
-    public static Double getRadiusCm(double nextDouble) {
-        return null;
-    }
 }

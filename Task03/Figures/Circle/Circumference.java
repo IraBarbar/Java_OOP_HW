@@ -1,4 +1,6 @@
 
 public interface Circumference {
-    void findCircumference();
+    Double findCircumference();
+
+    void printCircumference();
 }
