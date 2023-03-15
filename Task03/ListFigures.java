@@ -90,6 +90,37 @@ public class ListFigures implements Iterable<Figure> {
         return figures;
     }
 
+    public ArrayList<Figure> addNewRectangle(Scanner iScanner) {
+        String[] letters = new String[] { "a", "b" };
+        int[] side = new int[2];
+        int i = 0;
+        for (String letter : letters) {
+            System.out.printf("Input side %s in cm:", letter);
+            String temp = iScanner.next();
+            if (Menu.isDigit(temp)) {
+                if (Integer.parseInt(temp) > 0)
+                    side[i++] = Integer.parseInt(temp);
+            } else
+                System.out.println("The number is invalid!");
+        }
+        Figure rec = new Rectangle(side[0], side[1]);
+        figures.add(rec);
+        return figures;
+    }
+
+    public ArrayList<Figure> addNewSquare(Scanner iScanner) {
+        System.out.printf("Input side a in cm:");
+        String temp = iScanner.next();
+        if (Menu.isDigit(temp)) {
+            if (Integer.parseInt(temp) > 0) {
+                Figure square = new Square(Integer.parseInt(temp));
+                figures.add(square);
+            }
+        } else
+            System.out.println("The number is invalid!");
+        return figures;
+    }
+
     public ArrayList<Figure> modifiedCircle(int index, Scanner iScanner) {
         System.out.println("Input radius in cm: ");
         String radiusCm = iScanner.next();
@@ -103,6 +134,58 @@ public class ListFigures implements Iterable<Figure> {
         } else {
             System.out.println("Invalid number!");
         }
+        return figures;
+    }
+
+    public ArrayList<Figure> modifiedTriangle(int index, Scanner iScanner) {
+        String[] letters = new String[] { "a", "b", "c" };
+        int[] side = new int[3];
+        int i = 0;
+        for (String letter : letters) {
+            System.out.printf("Input side %s in cm:", letter);
+            String temp = iScanner.next();
+            if (Menu.isDigit(temp)) {
+                if (Integer.parseInt(temp) > 0)
+                    side[i++] = Integer.parseInt(temp);
+            } else
+                System.out.println("The number is invalid!");
+        }
+        Figure triangle = new Triangle(side[0], side[1], side[2]);
+        if (triangle.examination())
+            figures.set(index, triangle);
+        else
+            System.out.println("Sides entered incorrectly!");
+        return figures;
+    }
+
+    public ArrayList<Figure> modifiedRectangle(int index, Scanner iScanner) {
+        String[] letters = new String[] { "a", "b" };
+        int[] side = new int[2];
+        int i = 0;
+        for (String letter : letters) {
+            System.out.printf("Input side %s in cm:", letter);
+            String temp = iScanner.next();
+            if (Menu.isDigit(temp)) {
+                if (Integer.parseInt(temp) > 0)
+                    side[i++] = Integer.parseInt(temp);
+            } else
+                System.out.println("The number is invalid!");
+        }
+        Figure rectangle = new Rectangle(side[0], side[1]);
+        figures.set(index, rectangle);
+        return figures;
+    }
+
+    public ArrayList<Figure> modifiedSquare(int index, Scanner iScanner) {
+        System.out.printf("Input side a in cm:");
+        String temp = iScanner.next();
+        if (Menu.isDigit(temp)) {
+            if (Integer.parseInt(temp) > 0) {
+                Figure square = new Square(Integer.parseInt(temp));
+                figures.set(index, square);
+            }
+        } else
+            System.out.println("The number is invalid!");
         return figures;
     }
 
