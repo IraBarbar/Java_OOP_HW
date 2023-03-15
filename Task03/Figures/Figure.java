@@ -1,7 +1,6 @@
 public abstract class Figure  {
     public int area;
 
-    // площадь:
     public int findArea() {
         if (examination())
             return area;

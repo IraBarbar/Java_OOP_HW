@@ -19,7 +19,7 @@ public class ListFigures implements Iterable<Figure> {
         index = 0;
     }
 
-    private static boolean isDigit(String s) throws NumberFormatException {
+    private boolean isDigit(String s) throws NumberFormatException {
         try {
             Double.parseDouble(s);
             return true;
@@ -54,7 +54,7 @@ public class ListFigures implements Iterable<Figure> {
 
     public ArrayList<Figure> addNewCircle(Scanner iScanner) {
 
-        System.out.println("Input radius in cm:");
+        System.out.println("Input radius in cm: ");
         String radiusCm = iScanner.next();
         if (isDigit(radiusCm)) {
             if (Double.parseDouble(radiusCm) > 0) {
@@ -74,7 +74,7 @@ public class ListFigures implements Iterable<Figure> {
         int[] side = new int[3];
         int i = 0;
         for (String letter : letters) {
-            System.out.printf("Input side %s in cm:", letter);
+            System.out.printf("Input side %s in cm: ", letter);
             String temp = iScanner.next();
             if (Menu.isDigit(temp)) {
                 if (Integer.parseInt(temp) > 0)
@@ -95,7 +95,7 @@ public class ListFigures implements Iterable<Figure> {
         int[] side = new int[2];
         int i = 0;
         for (String letter : letters) {
-            System.out.printf("Input side %s in cm:", letter);
+            System.out.printf("Input side %s in cm: ", letter);
             String temp = iScanner.next();
             if (Menu.isDigit(temp)) {
                 if (Integer.parseInt(temp) > 0)
@@ -109,7 +109,7 @@ public class ListFigures implements Iterable<Figure> {
     }
 
     public ArrayList<Figure> addNewSquare(Scanner iScanner) {
-        System.out.printf("Input side a in cm:");
+        System.out.printf("Input side a in cm: ");
         String temp = iScanner.next();
         if (Menu.isDigit(temp)) {
             if (Integer.parseInt(temp) > 0) {
@@ -142,7 +142,7 @@ public class ListFigures implements Iterable<Figure> {
         int[] side = new int[3];
         int i = 0;
         for (String letter : letters) {
-            System.out.printf("Input side %s in cm:", letter);
+            System.out.printf("Input side %s in cm: ", letter);
             String temp = iScanner.next();
             if (Menu.isDigit(temp)) {
                 if (Integer.parseInt(temp) > 0)
@@ -163,7 +163,7 @@ public class ListFigures implements Iterable<Figure> {
         int[] side = new int[2];
         int i = 0;
         for (String letter : letters) {
-            System.out.printf("Input side %s in cm:", letter);
+            System.out.printf("Input side %s in cm: ", letter);
             String temp = iScanner.next();
             if (Menu.isDigit(temp)) {
                 if (Integer.parseInt(temp) > 0)
@@ -177,7 +177,7 @@ public class ListFigures implements Iterable<Figure> {
     }
 
     public ArrayList<Figure> modifiedSquare(int index, Scanner iScanner) {
-        System.out.printf("Input side a in cm:");
+        System.out.printf("Input side a in cm: ");
         String temp = iScanner.next();
         if (Menu.isDigit(temp)) {
             if (Integer.parseInt(temp) > 0) {
@@ -198,19 +198,4 @@ public class ListFigures implements Iterable<Figure> {
         return figures;
     }
 
-    public ArrayList<Figure> getFigures() {
-        return figures;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setFigures(ArrayList<Figure> figures) {
-        this.figures = figures;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
 }

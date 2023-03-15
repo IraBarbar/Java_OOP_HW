@@ -1,8 +1,8 @@
 
 public class Triangle extends Polygon {
-    int a;
-    int b;
-    int c;
+    private int a;
+    private int b;
+    private int c;
 
     public Triangle(int a, int b, int c) {
         this.a = a;

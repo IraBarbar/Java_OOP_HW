@@ -54,7 +54,7 @@ public class Program {
         figures.delFigure(i - 1);
     }
 
-    public static void printInfo(ListFigures figures) {
+    private static void printInfo(ListFigures figures) {
         for (Figure figure : figures) {
             System.out.printf("Index: ");
             System.out.println(++figures.index);
@@ -68,7 +68,7 @@ public class Program {
         figures.index = 0;
     }
 
-    public static void changeFigure(Scanner iScanner, String typeClass, ListFigures figures) {
+    private static void printInfoOne(ListFigures figures,  String typeClass) {
         for (Figure figure : figures) {
             ++figures.index;
             if (figure.getClass().getSimpleName().equals(typeClass)) {
@@ -84,6 +84,10 @@ public class Program {
             }
         }
         figures.index = 0;
+    }
+
+    public static void changeFigure(Scanner iScanner, String typeClass, ListFigures figures) {
+        printInfoOne(figures, typeClass);
         System.out.println("Enter the index of the figure to be modified:  ");
         int i = iScanner.nextInt();
         if (typeClass.equals("Circle")) {

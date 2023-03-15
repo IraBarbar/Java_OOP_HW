@@ -53,14 +53,6 @@ public class Circle extends Figure implements Circumference {
         return super.equals(obj);
     }
 
-    public double getRadiusCm() {
-        return radiusCm;
-    }
-
-    public void setRadiusCm(double radiusCm) {
-        this.radiusCm = radiusCm;
-    }
-
     @Override
     public void printCircumference() {
         if (!examination())

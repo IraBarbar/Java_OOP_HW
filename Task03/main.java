@@ -6,7 +6,6 @@ public class main {
     public static void main(String[] args) {
 
         Scanner iScanner = new Scanner(System.in);
-        String[] nameClass = new String[] {"Circle", "Triangle", "Rectangle", "Square"};
         ListFigures  figures = new ListFigures();
         
         Figure circle01 = new Circle(15);
@@ -26,7 +25,7 @@ public class main {
         figures.add(square01);
 
 
-        Menu.getMenu(iScanner, figures, nameClass);
+        Menu.getMenu(iScanner, figures);
 
         iScanner.close();
     }

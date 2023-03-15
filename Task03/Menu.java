@@ -10,40 +10,35 @@ public class Menu {
         }
     }
 
-    public static void getMenu(Scanner iScanner, ListFigures figures, String[] arr) {
+    public static void getMenu(Scanner iScanner, ListFigures figures) {
         int num = numMenu(iScanner);
         switch (num) {
             case 1:
                 Program.getInfo(figures);
-                getMenu(iScanner, figures, arr);
+                getMenu(iScanner, figures);
                 break;
             case 2:
-                Program.newFigure(iScanner, addClass(arr, iScanner), figures);
-                getMenu(iScanner, figures, arr);
+                Program.newFigure(iScanner, addClass(iScanner), figures);
+                getMenu(iScanner, figures);
                 break;
             case 3:
                 Program.delFigure(iScanner, figures);
-                getMenu(iScanner, figures, arr);
+                getMenu(iScanner, figures);
                 break;
             case 4:
-                Program.changeFigure(iScanner, addClass(arr, iScanner), figures);
-                getMenu(iScanner, figures, arr);
+                Program.changeFigure(iScanner, addClass(iScanner), figures);
+                getMenu(iScanner, figures);
                 break;
             case 5:
                 Program.sortArea(figures);
-                getMenu(iScanner, figures, arr);
+                getMenu(iScanner, figures);
                 break;
             case 6:
-               
-                getMenu(iScanner, figures, arr);
-                break;
-            case 7:
                 break;
             default:
-                getMenu(iScanner, figures, arr);
+                getMenu(iScanner, figures);
                 break;
         }
-
     }
 
     private static void printMenu() {
@@ -53,8 +48,7 @@ public class Menu {
                 "\t\t3. Remove an animal from the list of the figures.\n" +
                 "\t\t4. Change shape parameters by index.\n" +
                 "\t\t5. Sort by area. Information output.\n" +
-                "\t\t6. Make all the animals currently in the zoo make a sound.\n" +
-                "\t\t7. Exit.\n");
+                "\t\t6. Exit.\n");
     }
     private static int numMenu(Scanner iScanner) {
         printMenu();
@@ -72,7 +66,8 @@ public class Menu {
         }
         return 10;
     }
-    private static String addClass(String[] array, Scanner iScanner) {
+    private static String addClass(Scanner iScanner) {
+        String[] array = new String[] {"Circle", "Triangle", "Rectangle", "Square"};
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%d. %s\n", i + 1, array[i]);
         }
