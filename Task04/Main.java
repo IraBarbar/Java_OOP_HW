@@ -56,8 +56,8 @@ public class Main {
         listDouble.bubbleSort();
         listDouble.printArr();
 
-        Integer[] arr02 = { 10, 20, -2 };
-        LL<Integer> intList = new LL<>(arr02);
+        Float[] arr02 = { 10.2f, 20f, -2.3333f };
+        LL<Float> intList = new LL<>(arr02);
         intList.printArr();
         intList.bubbleSort();
         intList.printArr();

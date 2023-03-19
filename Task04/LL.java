@@ -2,7 +2,7 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class LL<T extends Comparable<T>>  implements Iterable<T> {
+public class LL<T extends Comparable<T>> implements Iterable<T> {
 
     private LinkedList<T> arr;
     private int index;
@@ -22,7 +22,8 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
         }
         index = 0;
     }
-    //Оператор, получающий элемент по заданному индексу:
+
+    // Оператор, получающий элемент по заданному индексу:
     public T get(int index) {
         if (index < 0 || index >= size) {
             System.out.println("The index is invalid!");
@@ -31,7 +32,7 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
         return arr.get(index);
     }
 
-    //Сортировка простым выбором:
+    // Сортировка простым выбором:
     public void selectionSort() {
         if (size < 2) {
             // Если список пустой или содержит только один элемент, то он уже отсортирован
@@ -57,7 +58,7 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
             // Если список пустой или содержит только один элемент, то он уже отсортирован
             return;
         }
-        
+
         boolean swapped = true;
         while (swapped) {
             swapped = false;
@@ -73,6 +74,7 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
             }
         }
     }
+
     // Сортировка простыми вставками:
     public void insertionSort() {
         if (size < 2) {
@@ -89,8 +91,11 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
             arr.set(j + 1, current);
         }
     }
-    /**Проверка наличия элемента в массиве. Возвращает true, 
-    если элемент в массиве есть, false.*/
+
+    /**
+     * Проверка наличия элемента в массиве. Возвращает true,
+     * если элемент в массиве есть, false.
+     */
     public boolean contains(T value) {
         return arr.contains(value);
     }
@@ -98,7 +103,6 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
     public void printContains(T value) {
         System.out.println("The element  is in the list " + contains(value));
     }
-
 
     public int findIndex(T element) {
         int index = 0;
@@ -112,7 +116,7 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
     }
 
     public void printIndex(T element) {
-        System.out.println("The index of elements = " + findIndex(element));
+        System.out.println("The index " + element + " = " + findIndex(element));
     }
 
     public T product() {
@@ -209,7 +213,7 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
     public T remove(int index) {
         if (index < 0 || index >= size) {
             System.out.println("The index is invalid!");
-            return null; 
+            return null;
         }
         T removedElement = arr.remove(index);
         size--;
@@ -235,7 +239,6 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
         return it;
     }
 
-
     public void removeAll(T element) {
         while (arr.contains(element)) {
             arr.remove(element);
@@ -254,11 +257,12 @@ public class LL<T extends Comparable<T>>  implements Iterable<T> {
     public boolean isEmpty() {
         return arr.isEmpty();
     }
-    //Задание значения элементу массива с заданным индексом:
+
+    // Задание значения элементу массива с заданным индексом:
     public T set(int index, T obj) {
         if (index < 0 || index >= size) {
             System.out.println("The index is invalid!");
-            return null; 
+            return null;
         }
         return arr.set(index, obj);
     }
