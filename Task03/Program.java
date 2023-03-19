@@ -86,6 +86,11 @@ public class Program {
         figures.index = 0;
     }
 
+    /**
+     * @param iScanner
+     * @param typeClass
+     * @param figures
+     */
     public static void changeFigure(Scanner iScanner, String typeClass, ListFigures figures) {
         printInfoOne(figures, typeClass);
         System.out.println("Enter the index of the figure to be modified:  ");
