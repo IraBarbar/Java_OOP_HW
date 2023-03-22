@@ -94,7 +94,7 @@ public class LL<T extends Comparable<T>> implements Iterable<T> {
 
     /**
      * Проверка наличия элемента в массиве. Возвращает true,
-     * если элемент в массиве есть, false.
+     * если элемент в массиве есть, false - нет.
      */
     public boolean contains(T value) {
         return arr.contains(value);
@@ -271,11 +271,11 @@ public class LL<T extends Comparable<T>> implements Iterable<T> {
         arr.clear();
     }
 
-    public int indexOf(Object obj) {
+    public int indexOf(T obj) {
         return arr.indexOf(obj);
     }
 
-    public int lastIndexOf(Object obj) {
+    public int lastIndexOf(T obj) {
         return arr.lastIndexOf(obj);
     }
 }
